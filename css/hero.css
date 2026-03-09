@@ -81,7 +81,7 @@
 }
 
 .hero-title-gradient {
-    background: linear-gradient(90deg, #FFCC00 0%, #FF007A 50%, #00AEEF 100%);
+    background: linear-gradient(90deg, #ffcc00 0%, #ff007a 50%, #00aeef 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -90,7 +90,8 @@
 
 .hero-description {
     font-size: 1.125rem;
-    color: var(--text-light);
+    color: var(--white);
+    font-weight: 700;
     line-height: 1.8;
     margin-bottom: 2rem;
 }
