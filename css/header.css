@@ -153,6 +153,14 @@
 }
 
 @media (max-width: 992px) {
+  .mobile-toggle span {
+    background: white;
+  }
+
+  .mobile-toggle.active span {
+    background: var(--text-dark);
+  }
+
   .nav-menu {
     position: fixed;
     top: 0;
