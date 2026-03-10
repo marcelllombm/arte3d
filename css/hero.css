@@ -13,7 +13,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, hsla(195, 97%, 15%, 0.75) 0%, hsl(195 100% 47% / 0.75) 100%);
+    background: linear-gradient(
+        140deg,
+        hsla(203, 100%, 20%, 0.95) 0%,
+        hsla(203, 100%, 20%, 0.85) 50%,
+        hsla(195, 100%, 47%, 0.75) 100%
+    );
     z-index: 0;
 }
 
@@ -31,7 +36,7 @@
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 2rem;
+    padding: 20rem 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -69,7 +74,7 @@
 }
 
 .hero-title {
-    font-size: 3.75rem;
+    font-size: 4.55rem;
     font-weight: 800;
     line-height: 1.1;
     color: var(--text-dark);
@@ -325,7 +330,7 @@
 
 .scroll-indicator span {
     font-size: 0.75rem;
-    color: var(--text-light);
+    color: var(--white);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -334,7 +339,7 @@
 .scroll-mouse {
     width: 26px;
     height: 40px;
-    border: 3px solid var(--primary-blue);
+    border: 3px solid var(--white);
     border-radius: 20px;
     position: relative;
 }
@@ -342,7 +347,7 @@
 .scroll-wheel {
     width: 4px;
     height: 8px;
-    background: var(--primary-blue);
+    background: var(--white);
     border-radius: 2px;
     position: absolute;
     top: 8px;
@@ -359,7 +364,7 @@
     }
 
     .hero-title {
-        font-size: 2.75rem;
+        font-size: 3.55rem;
     }
 
     .hero-buttons {
@@ -384,6 +389,9 @@
 }
 
 @media (max-width: 576px) {
+    .scroll-indicator {
+        display: none;
+    }
     .hero {
         padding-top: 90px;
     }
@@ -397,7 +405,7 @@
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .hero-description {
