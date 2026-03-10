@@ -91,6 +91,7 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     display: inline-block;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.4);
 }
 
 .hero-description {
