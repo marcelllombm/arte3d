@@ -106,7 +106,7 @@
     background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
     color: white;
     padding: 1rem 2rem;
-    border-radius: 50px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: 700;
     font-size: 1rem;
@@ -141,15 +141,15 @@
 }
 
 .hero-btn-secondary {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     color: var(--primary-blue);
     padding: 1rem 2rem;
-    border-radius: 50px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: 700;
     font-size: 1rem;
     transition: all 0.3s ease;
-    border: 2px solid var(--primary-blue);
+    border: 2px solid rgba(0, 102, 204, 0.2);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -221,8 +221,11 @@
 
     width: 100%;
     height: auto;
-    border-radius: 0 0 80px 0;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+    border-radius: 20px 20px 78px 0;
+    transform: perspective(300px) rotateY(-10deg) rotateX(3deg);
+    outline: 6px solid white;
+    outline-offset: -7px;
 }
 
 .hero-float-card {
