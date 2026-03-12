@@ -52,9 +52,23 @@
     transform: scale(1.05);
 }
 
-.logo-text {
+.logo-text-branco {
     height: 35px;
     width: auto;
+}
+
+.logo-text-preto {
+    display: none;
+    height: 35px;
+    width: auto;
+}
+
+.scrolled .logo-text-branco {
+    display: none;
+}
+
+.scrolled .logo-text-preto {
+    display: block;
 }
 
 .logo-icon {
