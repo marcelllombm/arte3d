@@ -52,6 +52,11 @@
     transform: scale(1.05);
 }
 
+.logo-text {
+    height: 35px;
+    width: auto;
+}
+
 .logo-icon {
     width: 45px;
     height: 45px;
