@@ -1,0 +1,119 @@
+.who-we-are {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, var(--bg-light) 0%, #ffffff 100%);
+}
+
+.who-we-are-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.who-we-are-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.who-we-are-badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    color: white;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.who-we-are-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.who-we-are-highlight {
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.who-we-are-description {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.who-we-are-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.who-we-are-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+}
+
+.who-we-are-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-blue);
+    box-shadow: 0 20px 50px rgba(0, 102, 204, 0.15);
+}
+
+.who-we-are-card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.who-we-are-card-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+.who-we-are-card-text {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .who-we-are {
+        padding: 4rem 1.5rem;
+    }
+
+    .who-we-are-title {
+        font-size: 1.85rem;
+    }
+
+    .who-we-are-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .who-we-are-card {
+        padding: 2rem 1.5rem;
+    }
+}
