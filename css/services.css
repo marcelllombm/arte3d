@@ -102,9 +102,10 @@
 }
 
 .service-icon-wrapper {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    width: 70%;
+    max-width: 150px;
+    
+    max-height: 100px;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -116,7 +117,6 @@
 
 .service-card:hover .service-icon-wrapper {
     transform: rotate(10deg) scale(1.1);
-    box-shadow: 0 15px 30px rgba(0, 102, 204, 0.3);
 }
 
 .service-icon {
@@ -244,8 +244,28 @@
     }
 
     .service-icon-wrapper {
-        width: 65px;
-        height: 65px;
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        position: relative;
+        transition: all 0.4s ease;
+        margin-top: -20px;
+    }
+
+    .service-card:hover .service-icon-wrapper {
+        transform: rotate(10deg) scale(1.1);
+        box-shadow: 0 15px 30px rgba(0, 102, 204, 0.3);
+    }
+
+    .service-icon {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
     }
 
     .service-icon {
