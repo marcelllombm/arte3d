@@ -1,6 +1,6 @@
 .who-we-are {
     padding: 6rem 2rem;
-    background: linear-gradient(180deg, var(--bg-light) 0%, #ffffff 100%);
+    background-color: azure;
 }
 
 .who-we-are-container {
@@ -14,16 +14,17 @@
 }
 
 .who-we-are-badge {
-    display: inline-block;
-    padding: 0.5rem 1.25rem;
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
-    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 212, 255, 0.1));
+
+    padding: 0.5rem 1rem;
     border-radius: 50px;
     font-size: 0.875rem;
     font-weight: 600;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
 }
 
 .who-we-are-title {
@@ -115,5 +116,83 @@
 
     .who-we-are-card {
         padding: 2rem 1.5rem;
+    }
+}
+
+.how-we-work {
+    margin-top: 5rem;
+    padding-top: 4rem;
+    border-top: 1px solid rgba(0, 102, 204, 0.1);
+}
+
+.how-we-work-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.how-we-work-badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    color: white;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.how-we-work-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.how-we-work-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.how-we-work-step {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.step-number {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(0, 102, 204, 0.1);
+    margin-bottom: 0.5rem;
+}
+
+.step-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.step-text {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .how-we-work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .how-we-work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .how-we-work-title {
+        font-size: 1.375rem;
     }
 }
