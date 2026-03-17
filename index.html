@@ -611,7 +611,7 @@
                 <div class="contact-form-wrapper reveal-right" id="contato">
                     <h3 class="contact-form-title">Solicite seu Orçamento</h3>
                     <p class="contact-form-subtitle">Preencha o formulário abaixo e retornamos em até 24h.</p>
-                    <form class="contact-form">
+                    <form class="contact-form" onsubmit="handleFormSubmit(event)">
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label" for="name">Nome</label>
@@ -729,6 +729,21 @@
             </div>
             <a href="#" class="footer-back-to-top" aria-label="Voltar ao topo">↑</a>
         </footer>
+
+        <script>
+            function handleFormSubmit(event) {
+                event.preventDefault();
+                const nome = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const telefone = document.getElementById('phone').value;
+                const servico = document.getElementById('service').value;
+                const mensagem = document.getElementById('message').value;
+                
+                const texto = `Olá, gostaria de solicitar um orçamento.%0A%0A*Nome:* ${nome}%0A*Email:* ${email}%0A*Telefone:* ${telefone}%0A*Serviço:* ${servico}%0A*Mensagem:* ${mensagem}`;
+                
+                window.open(`https://wa.me/5582998393751?text=${texto}`, '_blank');
+            }
+        </script>
 
         <script src="js/main.js"></script>
     </body>
