@@ -1,6 +1,6 @@
 .portfolio {
     padding: 6rem 2rem;
-    background: hsl(203 100% 20%);
+    background: linear-gradient(180deg, #16161a 0%, #2a0a0a 100%);
     position: relative;
     overflow: hidden;
 }
