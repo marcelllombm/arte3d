@@ -1,0 +1,212 @@
+/* Arte3D — identidade visual (vermelho, amarelo e prata da logo) */
+:root {
+    --metal: linear-gradient(180deg, #f4f4f6 0%, #c9cbd1 45%, #8e9199 100%);
+    --red-grad: linear-gradient(180deg, #ff3b2a 0%, #e10b0b 55%, #9e0000 100%);
+    --yellow-grad: linear-gradient(180deg, #ffe45c 0%, #ffc20e 55%, #e69500 100%);
+    --bevel: inset 0 2px 0 rgba(255, 255, 255, 0.35), inset 0 -4px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Logo */
+.logo-img {
+    height: 52px;
+    width: auto;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+}
+.footer-logo .logo-img {
+    height: 64px;
+}
+.logo {
+    animation: none;
+}
+.header.scrolled {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.18);
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, #e10b0b, #ffc20e) 1;
+}
+.header.scrolled .logo-img {
+    height: 44px;
+}
+.nav-link:hover {
+    color: var(--accent-yellow);
+}
+.header.scrolled .nav-link:hover {
+    color: var(--primary-red);
+}
+
+/* Botões em relevo 3D */
+.cta-button,
+.hero-btn-primary,
+.testimonials-cta-btn,
+.form-submit {
+    background: var(--red-grad);
+    box-shadow: var(--bevel), 0 6px 0 #6e0000, 0 12px 24px rgba(225, 11, 11, 0.35);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.cta-button:hover,
+.hero-btn-primary:hover,
+.testimonials-cta-btn:hover,
+.form-submit:hover {
+    transform: translateY(-3px);
+    filter: none;
+    box-shadow: var(--bevel), 0 9px 0 #6e0000, 0 16px 30px rgba(225, 11, 11, 0.4);
+}
+.cta-button:active,
+.hero-btn-primary:active,
+.testimonials-cta-btn:active,
+.form-submit:active {
+    transform: translateY(5px);
+    box-shadow: var(--bevel), 0 1px 0 #6e0000;
+}
+.hero-btn-secondary {
+    background: var(--yellow-grad);
+    color: #1c1c22;
+    border: none;
+    box-shadow: var(--bevel), 0 6px 0 #a86a00, 0 12px 24px rgba(255, 194, 14, 0.3);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.hero-btn-secondary:hover {
+    background: var(--yellow-grad);
+    color: #1c1c22;
+    transform: translateY(-3px);
+    box-shadow: var(--bevel), 0 9px 0 #a86a00, 0 16px 30px rgba(255, 194, 14, 0.4);
+}
+.hero-btn-secondary:active {
+    transform: translateY(5px);
+    box-shadow: var(--bevel), 0 1px 0 #a86a00;
+}
+.hero-buttons {
+    gap: 1.25rem;
+    padding-bottom: 8px;
+}
+
+/* Hero */
+.hero::after {
+    background: radial-gradient(ellipse, rgba(255, 194, 14, 0.12) 0%, transparent 70%);
+}
+.hero-title {
+    letter-spacing: -1.5px;
+    text-shadow: 0 6px 0 rgba(0, 0, 0, 0.25), 0 14px 30px rgba(0, 0, 0, 0.4);
+}
+.hero-title-gradient {
+    filter: drop-shadow(0 4px 0 rgba(120, 0, 0, 0.6));
+    text-shadow: none;
+}
+.hero-video {
+    border: 6px solid #e8e9ec;
+    box-shadow: 14px 14px 0 #ffc20e, 28px 28px 0 #e10b0b, 0 40px 60px rgba(0, 0, 0, 0.45);
+}
+.hero-float-card {
+    border-left: 5px solid var(--primary-red);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
+}
+.hero-float-card-2 {
+    border-left-color: var(--accent-yellow);
+}
+.hero-float-icon {
+    background: var(--red-grad);
+    box-shadow: var(--bevel);
+}
+.hero-float-card-2 .hero-float-icon {
+    background: var(--yellow-grad);
+    color: #1c1c22;
+}
+
+/* Selos de seção */
+.services-badge,
+.who-we-are-badge,
+.portfolio-badge,
+.testimonials-badge,
+.contact-badge,
+.how-we-work-badge {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    border-left: 4px solid var(--accent-yellow);
+    border-radius: 6px;
+    background: rgba(225, 11, 11, 0.08);
+    color: var(--primary-red);
+}
+.title-line {
+    height: 6px;
+    border-radius: 3px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.18);
+}
+.services-title,
+.who-we-are-title,
+.portfolio-title,
+.testimonials-title,
+.contact-title {
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+/* Cartões com profundidade */
+.service-card,
+.who-we-are-card,
+.testimonial-card {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 5px solid var(--primary-red);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 6px 6px 0 rgba(0, 0, 0, 0.04);
+    border-radius: 18px;
+}
+.service-card:hover,
+.who-we-are-card:hover,
+.testimonial-card:hover {
+    border-bottom-color: var(--accent-yellow);
+    transform: translateY(-8px);
+    box-shadow: 0 22px 44px rgba(225, 11, 11, 0.18);
+}
+.service-number {
+    background: var(--metal);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+/* Filtros do portfólio */
+.filter-btn {
+    border-radius: 8px;
+    font-weight: 700;
+}
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--red-grad);
+    color: #fff;
+    border-color: var(--primary-red);
+    box-shadow: var(--bevel), 0 4px 0 #6e0000;
+}
+.portfolio-item {
+    border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* Rodapé */
+.footer-description,
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+}
+.footer-links a:hover {
+    color: var(--accent-yellow);
+}
+.footer-back-to-top {
+    background: var(--yellow-grad);
+    color: #1c1c22;
+    box-shadow: var(--bevel), 0 4px 0 #a86a00;
+}
+
+@media (max-width: 992px) {
+    .hero-video {
+        box-shadow: 8px 8px 0 #ffc20e, 16px 16px 0 #e10b0b, 0 24px 40px rgba(0, 0, 0, 0.45);
+    }
+}
+@media (max-width: 576px) {
+    .logo-img {
+        height: 40px;
+    }
+    .hero-title {
+        text-shadow: 0 3px 0 rgba(0, 0, 0, 0.25);
+    }
+}

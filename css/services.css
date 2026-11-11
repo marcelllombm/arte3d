@@ -12,7 +12,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(225, 11, 11, 0.2), transparent);
 }
 
 .services-container {
@@ -29,13 +29,13 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 212, 255, 0.1));
+    background: linear-gradient(135deg, rgba(225, 11, 11, 0.1), rgba(255, 194, 14, 0.1));
 
     padding: 0.5rem 1rem;
     border-radius: 50px;
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: var(--primary-red);
     margin-bottom: 1rem;
 }
 
@@ -77,15 +77,15 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-blue), var(--accent-cyan));
+    background: linear-gradient(90deg, var(--primary-red), var(--accent-yellow));
     transform: scaleX(0);
     transition: transform 0.4s ease;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(0, 102, 204, 0.15);
-    border-color: rgba(0, 102, 204, 0.1);
+    box-shadow: 0 25px 50px rgba(225, 11, 11, 0.15);
+    border-color: rgba(225, 11, 11, 0.1);
 }
 
 .service-card:hover::before {
@@ -120,7 +120,7 @@
     right: 1rem;
     font-size: 4rem;
     font-weight: 900;
-    color: rgba(0, 102, 204, 0.05);
+    color: rgba(225, 11, 11, 0.05);
     line-height: 1;
 }
 
@@ -142,7 +142,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--primary-blue);
+    color: var(--primary-red);
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -150,7 +150,7 @@
 
 .service-link:hover {
     gap: 0.75rem;
-    color: var(--accent-cyan);
+    color: var(--accent-yellow);
 }
 
 .service-link-icon {
@@ -183,8 +183,8 @@
     justify-content: center;
     width: 20px;
     height: 20px;
-    background: rgba(0, 102, 204, 0.1);
-    color: var(--primary-blue);
+    background: rgba(225, 11, 11, 0.1);
+    color: var(--primary-red);
     border-radius: 50%;
     font-size: 0.7rem;
     font-weight: 700;

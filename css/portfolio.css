@@ -12,7 +12,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 194, 14, 0.3), transparent);
 }
 
 .portfolio::after {
@@ -22,7 +22,7 @@
     left: -10%;
     width: 40%;
     height: 60%;
-    background: radial-gradient(ellipse, rgba(0, 102, 204, 0.15) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(225, 11, 11, 0.15) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -42,12 +42,12 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: rgba(0, 212, 255, 0.1);
+    background: rgba(255, 194, 14, 0.1);
     padding: 0.5rem 1rem;
     border-radius: 50px;
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--accent-cyan);
+    color: var(--accent-yellow);
     margin-bottom: 1rem;
 }
 
@@ -88,11 +88,11 @@
 
 .filter-btn:hover,
 .filter-btn.active {
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    background: linear-gradient(135deg, var(--primary-red), var(--accent-yellow));
     border-color: transparent;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.3);
+    box-shadow: 0 10px 30px rgba(225, 11, 11, 0.3);
 }
 
 .portfolio-grid {
@@ -151,7 +151,7 @@
 
 .portfolio-category {
     display: inline-block;
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    background: linear-gradient(135deg, var(--primary-red), var(--accent-yellow));
     color: white;
     padding: 0.375rem 0.875rem;
     border-radius: 50px;
@@ -184,7 +184,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--accent-cyan);
+    color: var(--accent-yellow);
     font-size: 0.875rem;
     font-weight: 600;
     margin-top: 0.5rem;
@@ -209,7 +209,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    background: linear-gradient(135deg, var(--primary-red), var(--accent-yellow));
     color: white;
     padding: 1rem 2.5rem;
     border-radius: 50px;
@@ -221,7 +221,7 @@
 
 .portfolio-cta-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(0, 102, 204, 0.4);
+    box-shadow: 0 15px 40px rgba(225, 11, 11, 0.4);
 }
 
 .portfolio-cta-btn-icon {

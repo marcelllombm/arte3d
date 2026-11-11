@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(225, 11, 11, 0.2), transparent);
 }
 
 .contact-container {
@@ -32,12 +32,12 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 212, 255, 0.1));
+  background: linear-gradient(135deg, rgba(225, 11, 11, 0.1), rgba(255, 194, 14, 0.1));
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--primary-blue);
+  color: var(--primary-red);
   margin-bottom: 1.5rem;
 }
 
@@ -72,7 +72,7 @@
 .contact-icon {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+  background: linear-gradient(135deg, var(--primary-red), var(--accent-yellow));
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -108,30 +108,30 @@
 .social-link {
   width: 48px;
   height: 48px;
-  background: rgba(0, 102, 204, 0.08);
+  background: rgba(225, 11, 11, 0.08);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-blue);
+  color: var(--primary-red);
   font-size: 1.25rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .social-link:hover {
-  background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+  background: linear-gradient(135deg, var(--primary-red), var(--accent-yellow));
   color: white;
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 102, 204, 0.25);
+  box-shadow: 0 10px 25px rgba(225, 11, 11, 0.25);
 }
 
 .contact-form-wrapper {
   background: white;
   padding: 3rem;
   border-radius: 24px;
-  box-shadow: 0 25px 60px rgba(0, 102, 204, 0.1);
-  border: 1px solid rgba(0, 102, 204, 0.08);
+  box-shadow: 0 25px 60px rgba(225, 11, 11, 0.1);
+  border: 1px solid rgba(225, 11, 11, 0.08);
 }
 
 .contact-form-title {
@@ -178,7 +178,7 @@
 .form-input,
 .form-textarea {
   padding: 1rem 1.25rem;
-  border: 2px solid rgba(0, 102, 204, 0.1);
+  border: 2px solid rgba(225, 11, 11, 0.1);
   border-radius: 12px;
   font-size: 0.9375rem;
   color: var(--text-dark);
@@ -190,9 +190,9 @@
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: var(--primary-blue);
+  border-color: var(--primary-red);
   background: white;
-  box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
+  box-shadow: 0 0 0 4px rgba(225, 11, 11, 0.1);
 }
 
 .form-textarea {
@@ -201,7 +201,7 @@
 }
 
 .form-submit {
-  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
   color: white;
   padding: 1.125rem 2rem;
   border: none;
@@ -219,7 +219,7 @@
 
 .form-submit:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(0, 102, 204, 0.35);
+  box-shadow: 0 15px 40px rgba(225, 11, 11, 0.35);
 }
 
 .form-submit-icon {
@@ -240,7 +240,7 @@
 }
 
 .form-note-icon {
-  color: var(--primary-blue);
+  color: var(--primary-red);
 }
 
 @media (max-width: 992px) {

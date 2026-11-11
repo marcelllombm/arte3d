@@ -1,6 +1,6 @@
 .testimonials {
   padding: 6rem 2rem;
-  background: linear-gradient(180deg, white 0%, #F5F7FA 100%);
+  background: linear-gradient(180deg, white 0%, #f4f4f6 100%);
   position: relative;
   overflow: hidden;
 }
@@ -12,7 +12,7 @@
   left: 5%;
   font-size: 20rem;
   font-weight: 900;
-  color: rgba(0, 102, 204, 0.03);
+  color: rgba(225, 11, 11, 0.03);
   line-height: 1;
   pointer-events: none;
   font-family: Georgia, serif;
@@ -25,7 +25,7 @@
   right: 0;
   width: 30%;
   height: 100%;
-  background: radial-gradient(ellipse, rgba(0, 102, 204, 0.05) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(225, 11, 11, 0.05) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -45,12 +45,12 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 212, 255, 0.1));
+  background: linear-gradient(135deg, rgba(225, 11, 11, 0.1), rgba(255, 194, 14, 0.1));
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--primary-blue);
+  color: var(--primary-red);
   margin-bottom: 1rem;
 }
 
@@ -81,12 +81,12 @@
   border-radius: 24px;
   position: relative;
   transition: all 0.4s ease;
-  border: 1px solid rgba(0, 102, 204, 0.08);
+  border: 1px solid rgba(225, 11, 11, 0.08);
 }
 
 .testimonial-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(0, 102, 204, 0.12);
+  box-shadow: 0 25px 50px rgba(225, 11, 11, 0.12);
 }
 
 .testimonial-quote {
@@ -94,7 +94,7 @@
   top: 1.5rem;
   right: 1.5rem;
   font-size: 4rem;
-  color: rgba(0, 102, 204, 0.08);
+  color: rgba(225, 11, 11, 0.08);
   line-height: 1;
   font-family: Georgia, serif;
 }
@@ -106,7 +106,7 @@
 }
 
 .testimonial-star {
-  color: #FFB800;
+  color: #ffc20e;
   font-size: 1.125rem;
 }
 
@@ -123,7 +123,7 @@
   align-items: center;
   gap: 1rem;
   padding-top: 1.25rem;
-  border-top: 1px solid rgba(0, 102, 204, 0.08);
+  border-top: 1px solid rgba(225, 11, 11, 0.08);
 }
 
 .testimonial-avatar {
@@ -131,7 +131,7 @@
   height: 56px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--primary-blue);
+  border: 3px solid var(--primary-red);
 }
 
 .testimonial-info h4 {
@@ -149,7 +149,7 @@
 
 .testimonial-company {
   font-weight: 600;
-  color: var(--primary-blue);
+  color: var(--primary-red);
 }
 
 .testimonials-nav {
@@ -163,7 +163,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: rgba(0, 102, 204, 0.2);
+  background: rgba(225, 11, 11, 0.2);
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
@@ -171,7 +171,7 @@
 
 .testimonial-dot.active,
 .testimonial-dot:hover {
-  background: var(--primary-blue);
+  background: var(--primary-red);
   transform: scale(1.2);
 }
 
@@ -179,7 +179,7 @@
   text-align: center;
   margin-top: 4rem;
   padding: 3rem;
-  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
   border-radius: 24px;
   position: relative;
   overflow: hidden;
@@ -216,7 +216,7 @@
   align-items: center;
   gap: 0.5rem;
   background: white;
-  color: var(--primary-blue);
+  color: var(--primary-red);
   padding: 1rem 2rem;
   border-radius: 50px;
   text-decoration: none;

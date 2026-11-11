@@ -11,7 +11,7 @@
 .header.scrolled {
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 102, 204, 0.15);
+    box-shadow: 0 4px 30px rgba(225, 11, 11, 0.15);
 }
 
 .header.scrolled .nav-link {
@@ -19,11 +19,11 @@
 }
 
 .header.scrolled .logo {
-    color: var(--primary-blue);
+    color: var(--primary-red);
 }
 
 .header.scrolled .mobile-toggle span {
-    background: var(--primary-blue);
+    background: var(--primary-red);
 }
 
 .header-container {
@@ -115,13 +115,13 @@
     left: 0;
     width: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary-blue), var(--accent-cyan));
+    background: linear-gradient(90deg, var(--primary-red), var(--accent-yellow));
     border-radius: 2px;
     transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--accent-cyan);
+    color: var(--accent-yellow);
 }
 
 .nav-link:hover::after {
@@ -129,7 +129,7 @@
 }
 
 .cta-button {
-    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
     color: white;
     padding: 0.75rem 1.75rem;
     border-radius: 10px;
@@ -198,7 +198,7 @@
         flex-direction: column;
         justify-content: center;
         gap: 2rem;
-        box-shadow: -10px 0 30px rgba(0, 102, 204, 0.2);
+        box-shadow: -10px 0 30px rgba(225, 11, 11, 0.2);
         transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 

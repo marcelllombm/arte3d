@@ -17,13 +17,13 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 212, 255, 0.1));
+    background: linear-gradient(135deg, rgba(225, 11, 11, 0.1), rgba(255, 194, 14, 0.1));
 
     padding: 0.5rem 1rem;
     border-radius: 50px;
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: var(--primary-red);
     margin-bottom: 1rem;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .who-we-are-highlight {
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    background: linear-gradient(135deg, var(--primary-red), var(--accent-yellow));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -70,14 +70,14 @@
 
 .who-we-are-card:hover {
     transform: translateY(-10px);
-    border-color: var(--primary-blue);
-    box-shadow: 0 20px 50px rgba(0, 102, 204, 0.15);
+    border-color: var(--primary-red);
+    box-shadow: 0 20px 50px rgba(225, 11, 11, 0.15);
 }
 
 .who-we-are-card-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    background: linear-gradient(135deg, var(--primary-red), var(--accent-yellow));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -122,7 +122,7 @@
 .how-we-work {
     margin-top: 5rem;
     padding-top: 4rem;
-    border-top: 1px solid rgba(0, 102, 204, 0.1);
+    border-top: 1px solid rgba(225, 11, 11, 0.1);
 }
 
 .how-we-work-header {
@@ -133,7 +133,7 @@
 .how-we-work-badge {
     display: inline-block;
     padding: 0.5rem 1.25rem;
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    background: linear-gradient(135deg, var(--primary-red), var(--accent-yellow));
     color: white;
     border-radius: 50px;
     font-size: 0.875rem;
@@ -164,7 +164,7 @@
     display: inline-block;
     font-size: 3rem;
     font-weight: 900;
-    color: rgba(0, 102, 204, 0.1);
+    color: rgba(225, 11, 11, 0.1);
     margin-bottom: 0.5rem;
 }
 

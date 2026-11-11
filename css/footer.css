@@ -1,5 +1,5 @@
 .footer {
-    background: hsl(203 100% 20%);
+    background: linear-gradient(180deg, #1c1c22 0%, #0e0e11 100%);
     padding: 4rem 2rem 2rem;
     position: relative;
     overflow: hidden;
@@ -12,7 +12,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 194, 14, 0.3), transparent);
 }
 
 .footer::after {
@@ -22,7 +22,7 @@
     right: -5%;
     width: 40%;
     height: 50%;
-    background: radial-gradient(ellipse, rgba(0, 102, 204, 0.1) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(225, 11, 11, 0.1) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -95,9 +95,9 @@
 }
 
 .footer-social-link:hover {
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    background: linear-gradient(135deg, var(--primary-red), var(--accent-yellow));
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 102, 204, 0.3);
+    box-shadow: 0 10px 20px rgba(225, 11, 11, 0.3);
 }
 
 .footer-column h4 {
@@ -127,7 +127,7 @@
 }
 
 .footer-links a:hover {
-    color: var(--accent-cyan);
+    color: var(--accent-yellow);
     padding-left: 5px;
 }
 
@@ -156,7 +156,7 @@
 }
 
 .footer-copyright span {
-    color: var(--accent-cyan);
+    color: var(--accent-yellow);
     font-weight: 600;
 }
 
@@ -173,7 +173,7 @@
 }
 
 .footer-legal a:hover {
-    color: var(--accent-cyan);
+    color: var(--accent-yellow);
 }
 
 .footer-back-to-top {
@@ -182,7 +182,7 @@
     right: 2rem;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    background: linear-gradient(135deg, var(--primary-red), var(--accent-yellow));
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -193,7 +193,7 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 25px rgba(0, 102, 204, 0.3);
+    box-shadow: 0 10px 25px rgba(225, 11, 11, 0.3);
     z-index: 999;
 }
 
@@ -204,7 +204,7 @@
 
 .footer-back-to-top:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 102, 204, 0.4);
+    box-shadow: 0 15px 35px rgba(225, 11, 11, 0.4);
 }
 
 @media (max-width: 992px) {
