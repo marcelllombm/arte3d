@@ -288,17 +288,19 @@ function initHeroVideo() {
     video.poster = img.currentSrc || img.src;
     video.width = img.width || 720;
     video.height = img.height || 406;
+    // iOS exige os atributos (não só as propriedades) e o vídeo dentro do DOM
+    ['muted', 'loop', 'playsinline', 'webkit-playsinline', 'autoplay', 'disablepictureinpicture'].forEach(a => video.setAttribute(a, ''));
     video.muted = true;
-    video.loop = true;
-    video.playsInline = true;
-    video.preload = 'auto';
+    video.defaultMuted = true;
+    video.setAttribute('preload', 'auto');
     video.setAttribute('aria-label', img.alt);
-    video.setAttribute('disablepictureinpicture', '');
     video.src = img.dataset.video;
-    video.addEventListener('canplay', () => {
-      img.replaceWith(video);
-      video.play().catch(() => {});
-    }, { once: true });
+    img.replaceWith(video); // mostra o mesmo pôster enquanto carrega
+    const tryPlay = () => video.play().catch(() => {});
+    tryPlay();
+    video.addEventListener('canplay', tryPlay, { once: true });
+    // Modo de economia de bateria do iOS bloqueia autoplay: toque na tela libera
+    document.addEventListener('touchstart', tryPlay, { once: true, passive: true });
   };
 
   const start = () => ('requestIdleCallback' in window ? requestIdleCallback(swap, { timeout: 3000 }) : setTimeout(swap, 1500));
