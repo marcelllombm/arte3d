@@ -274,13 +274,13 @@ style.textContent = `
 document.head.appendChild(style);
 
 // O pôster (imagem) é o LCP; o vídeo só é carregado depois que a página terminou de carregar.
+// Se o vídeo não começar a tocar (iOS: servidor sem Range, Modo de Pouca Energia etc.),
+// trocamos por um WebP animado, que toca sozinho como qualquer imagem.
 function initHeroVideo() {
   const img = document.getElementById('hero-media');
   if (!img || !img.dataset.video) return;
 
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const saveData = navigator.connection && navigator.connection.saveData;
-  if (reduceMotion || saveData) return;
+  if (navigator.connection && navigator.connection.saveData) return;
 
   const swap = () => {
     const video = document.createElement('video');
@@ -295,25 +295,54 @@ function initHeroVideo() {
     video.setAttribute('preload', 'auto');
     video.setAttribute('aria-label', img.alt);
     img.replaceWith(video); // mostra o mesmo pôster enquanto carrega
-    const gestures = ['touchend', 'click', 'keydown'];
-    const tryPlay = () => video.play().then(() => {
-      gestures.forEach(g => document.removeEventListener(g, tryPlay));
-    }).catch(() => {});
-    video.addEventListener('canplay', tryPlay, { once: true });
+
+    let playing = false;
+    let done = false;
+    video.addEventListener('timeupdate', () => {
+      if (video.currentTime > 0) playing = true;
+    });
+
+    const fallback = () => {
+      if (playing || done) return;
+      done = true;
+      const anim = new Image();
+      anim.className = img.className;
+      anim.alt = img.alt;
+      anim.width = video.width;
+      anim.height = video.height;
+      anim.decoding = 'async';
+      anim.onload = () => {
+        if (playing) return; // o vídeo começou enquanto a animação baixava
+        video.pause();
+        video.replaceWith(anim);
+      };
+      anim.src = img.dataset.anim;
+    };
+
+    const tryPlay = () => video.play().catch(() => {});
+    const watch = () => {
+      tryPlay();
+      if (img.dataset.anim) setTimeout(fallback, 2500);
+    };
+
     // O servidor não suporta requisições Range (exigidas pelo Safari/iOS para <video>),
     // então baixamos o arquivo inteiro e o entregamos ao player como blob local.
     fetch(img.dataset.video)
-      .then(r => r.blob())
-      .then(blob => {
-        video.src = URL.createObjectURL(blob);
-        tryPlay();
+      .then(r => {
+        if (!r.ok) throw new Error(r.status);
+        return r.blob();
       })
-      .catch(() => { video.src = img.dataset.video; tryPlay(); });
-    // Modo de pouca energia do iOS bloqueia autoplay: o primeiro toque completo libera
-    gestures.forEach(g => document.addEventListener(g, tryPlay, { passive: true }));
+      .then(blob => {
+        video.src = URL.createObjectURL(new Blob([blob], { type: 'video/mp4' }));
+        watch();
+      })
+      .catch(() => {
+        video.src = img.dataset.video;
+        watch();
+      });
   };
 
-  const start = () => ('requestIdleCallback' in window ? requestIdleCallback(swap, { timeout: 3000 }) : setTimeout(swap, 1500));
+  const start = () => setTimeout(swap, 300);
   if (document.readyState === 'complete') start();
   else window.addEventListener('load', start, { once: true });
 }
