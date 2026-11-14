@@ -294,13 +294,23 @@ function initHeroVideo() {
     video.defaultMuted = true;
     video.setAttribute('preload', 'auto');
     video.setAttribute('aria-label', img.alt);
-    video.src = img.dataset.video;
     img.replaceWith(video); // mostra o mesmo pôster enquanto carrega
-    const tryPlay = () => video.play().catch(() => {});
-    tryPlay();
+    const gestures = ['touchend', 'click', 'keydown'];
+    const tryPlay = () => video.play().then(() => {
+      gestures.forEach(g => document.removeEventListener(g, tryPlay));
+    }).catch(() => {});
     video.addEventListener('canplay', tryPlay, { once: true });
-    // Modo de economia de bateria do iOS bloqueia autoplay: toque na tela libera
-    document.addEventListener('touchstart', tryPlay, { once: true, passive: true });
+    // O servidor não suporta requisições Range (exigidas pelo Safari/iOS para <video>),
+    // então baixamos o arquivo inteiro e o entregamos ao player como blob local.
+    fetch(img.dataset.video)
+      .then(r => r.blob())
+      .then(blob => {
+        video.src = URL.createObjectURL(blob);
+        tryPlay();
+      })
+      .catch(() => { video.src = img.dataset.video; tryPlay(); });
+    // Modo de pouca energia do iOS bloqueia autoplay: o primeiro toque completo libera
+    gestures.forEach(g => document.addEventListener(g, tryPlay, { passive: true }));
   };
 
   const start = () => ('requestIdleCallback' in window ? requestIdleCallback(swap, { timeout: 3000 }) : setTimeout(swap, 1500));
