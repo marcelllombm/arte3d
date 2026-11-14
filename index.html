@@ -27,8 +27,9 @@
     <link rel="icon" href="img/favicon-192.png" type="image/png" sizes="192x192" />
     <link rel="apple-touch-icon" href="img/favicon-192.png" />
     <link rel="preload" href="fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="img/hero-poster.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" as="image" type="image/webp" href="img/hero-poster-360.webp" imagesrcset="img/hero-poster-360.webp 360w, img/hero-poster-720.webp 720w" imagesizes="(max-width: 576px) 85vw, 550px" fetchpriority="high" />
     <link rel="stylesheet" href="css/app.min.css" />
 
     <script type="application/ld+json">
@@ -66,7 +67,7 @@
     <header class="header">
         <div class="header-container">
             <a href="#" class="logo" aria-label="Arte3D - voltar ao topo">
-                <img src="img/logo-arte3d.webp" alt="Arte3D" class="logo-img" width="256" height="128" />
+                <img src="img/logo-arte3d-128.webp" srcset="img/logo-arte3d-128.webp 128w, img/logo-arte3d-256.webp 256w" sizes="104px" alt="Arte3D" class="logo-img" width="256" height="128" />
             </a>
             <nav aria-label="Principal">
                 <ul class="nav-menu" id="menu-principal">
@@ -119,7 +120,7 @@
             </div>
             <div class="hero-visual">
                 <div class="hero-image-container">
-                    <img src="img/hero-poster.webp" alt="Projetos de fachada em ACM e letreiros em 3D da Arte3D" class="hero-video" id="hero-media" data-video="img/hero.mp4" width="720" height="406" fetchpriority="high" decoding="async" />
+                    <img src="img/hero-poster-360.webp" srcset="img/hero-poster-360.webp 360w, img/hero-poster-720.webp 720w" sizes="(max-width: 576px) 85vw, 550px" alt="Projetos de fachada em ACM e letreiros em 3D da Arte3D" class="hero-video" id="hero-media" data-video="img/hero.mp4" width="720" height="406" fetchpriority="high" decoding="async" />
                     <div class="hero-float-card hero-float-card-1">
                         <div class="hero-float-icon" aria-hidden="true">✓</div>
                         <div class="hero-float-text">
@@ -160,7 +161,7 @@
                 <div class="service-card reveal">
                     <span class="service-number">01</span>
                     <div class="service-icon-wrapper">
-                        <img src="img/iconImpressora.webp" alt="" class="service-icon" width="300" height="230" loading="lazy" decoding="async" />
+                        <img src="img/iconImpressora-150.webp" srcset="img/iconImpressora-150.webp 150w, img/iconImpressora-300.webp 300w" sizes="150px" alt="" class="service-icon" width="300" height="230" loading="lazy" decoding="async" />
                     </div>
                     <h3 class="service-title">Impressão em Lona</h3>
                     <p class="service-description">
@@ -179,7 +180,7 @@
                 <div class="service-card reveal delay-2">
                     <span class="service-number">02</span>
                     <div class="service-icon-wrapper">
-                        <img src="img/iconAutomotivo.webp" alt="" class="service-icon" width="300" height="293" loading="lazy" decoding="async" />
+                        <img src="img/iconAutomotivo-150.webp" srcset="img/iconAutomotivo-150.webp 150w, img/iconAutomotivo-300.webp 300w" sizes="150px" alt="" class="service-icon" width="300" height="293" loading="lazy" decoding="async" />
                     </div>
                     <h3 class="service-title">Adesivos Automotivos</h3>
                     <p class="service-description">
@@ -198,7 +199,7 @@
                 <div class="service-card reveal delay-3">
                     <span class="service-number">03</span>
                     <div class="service-icon-wrapper">
-                        <img src="img/iconFachada.webp" alt="" class="service-icon" width="300" height="293" loading="lazy" decoding="async" />
+                        <img src="img/iconFachada-150.webp" srcset="img/iconFachada-150.webp 150w, img/iconFachada-300.webp 300w" sizes="150px" alt="" class="service-icon" width="300" height="293" loading="lazy" decoding="async" />
                     </div>
                     <h3 class="service-title">Fachadas</h3>
                     <p class="service-description">Destaque sua empresa com comunicação visual de impacto.</p>
@@ -216,7 +217,7 @@
                 <div class="service-card reveal delay-2">
                     <span class="service-number">04</span>
                     <div class="service-icon-wrapper">
-                        <img src="img/iconFormato.webp" alt="" class="service-icon" width="300" height="277" loading="lazy" decoding="async" />
+                        <img src="img/iconFormato-150.webp" srcset="img/iconFormato-150.webp 150w, img/iconFormato-300.webp 300w" sizes="150px" alt="" class="service-icon" width="300" height="277" loading="lazy" decoding="async" />
                     </div>
                     <h3 class="service-title">Impressão Grande Formato</h3>
                     <p class="service-description">Materiais promocionais em qualquer tamanho que precisar.</p>
@@ -614,7 +615,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <a href="#" class="footer-logo" aria-label="Arte3D - voltar ao topo">
-                        <img src="img/logo-arte3d.webp" alt="Arte3D" class="logo-img" width="256" height="128" loading="lazy" />
+                        <img src="img/logo-arte3d-128.webp" srcset="img/logo-arte3d-128.webp 128w, img/logo-arte3d-256.webp 256w" sizes="128px" alt="Arte3D" class="logo-img" width="256" height="128" loading="lazy" />
                     </a>
                     <p class="footer-description">
                         Sua parceira estratégica em comunicação visual. Qualidade, agilidade e preço justo em cada
