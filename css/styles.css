@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
-
+@import "./fonts.css";
 @import "./animations.css";
 @import "./header.css";
 @import "./hero.css";
@@ -181,4 +180,30 @@ select {
     .section {
         padding: 4rem 0;
     }
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    z-index: 2000;
+    background: #fff;
+    color: #1c1c22;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+:focus-visible {
+    outline: 3px solid #ffc20e;
+    outline-offset: 3px;
+}
+
+address {
+    font-style: normal;
 }

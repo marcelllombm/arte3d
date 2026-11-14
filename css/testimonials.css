@@ -130,11 +130,18 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  object-fit: cover;
   border: 3px solid var(--primary-red);
+  background: var(--primary-red);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.testimonial-info h4 {
+.testimonial-info .testimonial-name {
   font-size: 1rem;
   font-weight: 700;
   color: var(--text-dark);

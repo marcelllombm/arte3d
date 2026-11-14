@@ -87,7 +87,7 @@
   transform: scale(1.1) rotate(5deg);
 }
 
-.contact-item-text h4 {
+.contact-item-text h3 {
   font-size: 0.9375rem;
   font-weight: 700;
   color: var(--text-dark);
